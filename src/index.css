@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 45 25% 97%;
+    --foreground: 0 0% 15%;
+
+    --card: 45 25% 99%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 45 25% 99%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 0 68% 42%;
+    --primary-foreground: 45 25% 97%;
+
+    --secondary: 40 60% 85%;
+    --secondary-foreground: 0 68% 42%;
+
+    --muted: 40 30% 92%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 35 80% 65%;
+    --accent-foreground: 0 0% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 30% 88%;
+    --input: 40 30% 88%;
+    --ring: 0 68% 42%;
+
+    --radius: 0.75rem;
+
+    /* Custom pizza theme colors */
+    --pizza-red: 0 68% 42%;
+    --pizza-cream: 45 25% 97%;
+    --pizza-orange: 25 85% 60%;
+    --pizza-gold: 45 90% 65%;
+    --pizza-warm: 15 60% 55%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 45 25% 97%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 45 25% 97%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 45 25% 97%;
+
+    --primary: 0 68% 55%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 40 20% 20%;
+    --secondary-foreground: 45 25% 97%;
+
+    --muted: 40 10% 15%;
+    --muted-foreground: 40 30% 70%;
+
+    --accent: 35 60% 45%;
+    --accent-foreground: 45 25% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 10% 20%;
+    --input: 40 10% 20%;
+    --ring: 0 68% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  .pizza-gradient {
+    background: linear-gradient(135deg, hsl(var(--pizza-cream)) 0%, hsl(var(--pizza-orange)) 50%, hsl(var(--pizza-red)) 100%);
+  }
+
+  .warm-glow {
+    box-shadow: 0 0 30px hsla(var(--pizza-orange), 0.3);
+  }
+}
+
+@layer components {
+  .pizza-button {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 lg:px-8;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+}
