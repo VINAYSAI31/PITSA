@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+const OneDriveLink = "https://drive.google.com/file/d/1ARR6r3R8RvSmyk4PDg6nIoQ5MdbsNgA6/view?usp=drive_link";
+
 
 const SpecialtiesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -55,7 +57,7 @@ const SpecialtiesSection = () => {
   ];
 
   return (
-    <section ref={ref} className="py-20 px-4 bg-gradient-to-b from-cream to-warm-cream">
+    <section id='specialties' ref={ref} className="py-20 px-4 bg-gradient-to-b from-cream to-warm-cream">
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-16 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <h2 className="text-5xl font-bold text-pizza-red mb-6 font-pizza">
@@ -102,6 +104,8 @@ const SpecialtiesSection = () => {
                 {/* Order Button */}
                 <Button 
                   size="sm"
+                                onClick={() => window.open(OneDriveLink, "_blank")}
+
                   className="bg-pizza-red hover:bg-pizza-red-dark text-cream font-bold rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300"
                 >
                   Order Now
@@ -119,6 +123,8 @@ const SpecialtiesSection = () => {
         <div className={`text-center mt-16 transition-all duration-1000 delay-800 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <Button 
             size="lg"
+                          onClick={() => window.open(OneDriveLink, "_blank")}
+
             className="bg-pizza-red hover:bg-pizza-red-dark text-cream font-bold py-4 px-12 text-xl rounded-full shadow-xl hover-lift animate-pulse-gentle"
           >
             🍕 VIEW COMPLETE MENU

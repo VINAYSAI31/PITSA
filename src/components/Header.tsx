@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+const OneDriveLink = "https://drive.google.com/file/d/1ARR6r3R8RvSmyk4PDg6nIoQ5MdbsNgA6/view?usp=drive_link";
+
 
 const Header = () => {
   const scrollToSection = (sectionId: string) => {
@@ -55,7 +57,7 @@ const Header = () => {
           {/* CTA Button */}
           <Button 
             className="pizza-button"
-            onClick={() => window.open('/menu.pdf', '_blank')}
+              onClick={() => window.open(OneDriveLink, "_blank")}
           >
             VIEW MENU
           </Button>

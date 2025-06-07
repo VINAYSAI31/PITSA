@@ -78,9 +78,9 @@ const Footer = () => {
                   </svg>
                   <span>@pitsaindia</span>
                 </a>
-                <p className="text-primary-foreground/60">
+                {/* <p className="text-primary-foreground/60">
                   Mon - Sun: 11:00 AM - 11:00 PM
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center">
             <p className="text-sm text-primary-foreground/60">
-              © 2024 PITSA - The Woodfire Pizza. All rights reserved. | Made with ❤️ for pizza lovers
+              © 2025 PITSA - The Woodfire Pizza. All rights reserved. | Made with ❤️ for pizza lovers
             </p>
           </div>
         </div>

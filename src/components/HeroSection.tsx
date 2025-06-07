@@ -1,16 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-const OneDriveLink = "https://onedrive.live.com/YOUR_LINK_HERE";
-
+const OneDriveLink = "https://drive.google.com/file/d/1ARR6r3R8RvSmyk4PDg6nIoQ5MdbsNgA6/view?usp=drive_link";
 
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden "
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={
         {
-          "--pizza-size": "950px",
+         "--pizza-size": "950px",
           "--pizza-bottom": "68%",
           "--leaf-1-size": "140px",
           "--leaf-1-top": "329px",
@@ -33,36 +32,36 @@ const HeroSection = () => {
       ></div> */}
 
       <div className="absolute inset-0 pizza-gradient opacity-20"></div>
-      <div className="absolute top-20 left-10 w-20 h-20 bg-pizza-orange/20 rounded-full animate-float"></div>
+      <div className="absolute top-20 left-10 w-10 sm:w-20 h-10 sm:h-20 bg-pizza-orange/20 rounded-full animate-float"></div>
       <div
-        className="absolute bottom-20 right-10 w-16 h-16 bg-pizza-red/20 rounded-full animate-float"
+        className="absolute bottom-20 right-10 w-8 sm:w-16 h-8 sm:h-16 bg-pizza-red/20 rounded-full animate-float"
         style={{ animationDelay: "1s" }}
       ></div>
       <div
-        className="absolute top-1/2 right-20 w-12 h-12 bg-pizza-gold/30 rounded-full animate-float"
+        className="absolute top-1/2 right-20 w-6 sm:w-12 h-6 sm:h-12 bg-pizza-gold/30 rounded-full animate-float"
         style={{ animationDelay: "2s" }}
       ></div>
-      <div className="container-max section-padding relative z-20 -mt-20">
+      <div className="container-max section-padding relative z-20 -mt-10 sm:-mt-20">
         {/* Content Section */}
-        <div className="relative z-30 text-center mb-20">
-          <h1 className="text-6xl md:text-8xl font-extrabold text-primary mb-4 tracking-tight drop-shadow-lg animate-slide-down">
+        <div className="relative z-30 text-center mb-10 sm:mb-20">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-primary mb-2 sm:mb-4 tracking-tight drop-shadow-lg animate-slide-down">
             PITSA
           </h1>
-          <p className="text-2xl md:text-3xl text-muted-foreground mb-6 font-light italic">
+          <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-4 sm:mb-6 font-light italic">
             The Woodfire Pizza 🍕
           </p>
 
           {/* Stylized Tagline */}
-          <div className="text-xl md:text-2xl text-foreground mb-14">
-            <div className="flex flex-wrap justify-center items-center gap-4 font-semibold tracking-wide">
+          <div className="text-lg sm:text-xl md:text-2xl text-foreground mb-8 sm:mb-14">
+            <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4 font-semibold tracking-wide">
               <span className="px-2 border-b-2 border-orange-400">
                 Authentic Flavors
               </span>
-              <span className="text-orange-400 text-2xl">•</span>
+              <span className="text-orange-400 text-xl sm:text-2xl">•</span>
               <span className="px-2 border-b-2 border-green-500">
                 Fresh Ingredients
               </span>
-              <span className="text-orange-400 text-2xl">•</span>
+              <span className="text-orange-400 text-xl sm:text-2xl">•</span>
               <span className="px-2 border-b-2 border-yellow-400">
                 Unforgettable Taste
               </span>
@@ -73,11 +72,11 @@ const HeroSection = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-7 justify-center items-center relative z-50">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-7 justify-center items-center relative z-50">
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px rgba(255, 100, 0, 0.5)" }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="bg-orange-500 hover:bg-orange-600 text-white text-xl px-12 py-4 rounded-full transition-all duration-300 cursor-pointer"
+              className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white text-lg sm:text-xl px-8 sm:px-12 py-3 sm:py-4 rounded-full transition-all duration-300 cursor-pointer"
               onClick={() => window.open(OneDriveLink, "_blank")}
             >
               🍕 VIEW OUR MENU
@@ -86,7 +85,7 @@ const HeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px rgba(255, 100, 0, 0.5)" }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="text-lg px-8 py-4 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-full transition-all duration-300 cursor-pointer"
+              className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-full transition-all duration-300 cursor-pointer"
               onClick={() => {
                 const element = document.getElementById("contact");
                 element?.scrollIntoView({ behavior: "smooth" });
@@ -100,8 +99,8 @@ const HeroSection = () => {
             className="absolute bottom-5 left-1/2 transform -translate-x-1/2"
             style={{ transform: "translate(-50%, var(--pizza-bottom))" }}
           >
-            <div className="relative mt-10">
-              {/* Pizza Image with glow animation - made much larger */}
+            <div className="relative mt-5 sm:mt-10">
+              {/* Pizza Image with glow animation */}
               <div
                 className="relative animate-glow animate-slide-up"
                 style={{
@@ -184,7 +183,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-20 opacity-20">
+      <div className="absolute bottom-0 left-0 w-full h-10 sm:h-20 opacity-20">
         <img
           src="/Images/6448c581-7fff-4753-a774-fc91f14cf53b.png"
           alt="Orange brush stroke"

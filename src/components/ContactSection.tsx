@@ -82,9 +82,9 @@ const ContactSection = () => {
                   className="text-lg font-semibold text-foreground hover:text-primary transition-colors inline-flex items-center space-x-2"
                 >
                   <span>@pitsaindia</span>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  {/* <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
+                  </svg> */}
                 </a>
                 <p className="text-muted-foreground mt-2">
                   Follow us for daily specials and behind-the-scenes content
@@ -126,7 +126,7 @@ const ContactSection = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="w-full text-lg py-6 border-white text-white hover:bg-white hover:text-primary"
+                  className="w-full text-lg py-6 border-white text-black hover:bg-white hover:text-primary"
                   onClick={() => window.open('/menu.pdf', '_blank')}
                 >
                   VIEW MENU
@@ -135,10 +135,10 @@ const ContactSection = () => {
             </div>
 
             <div className="mt-8 text-center">
-              <p className="text-sm text-muted-foreground">
+              {/* <p className="text-sm text-muted-foreground">
                 <strong>Operating Hours:</strong><br />
                 Monday - Sunday: 11:00 AM - 11:00 PM
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
