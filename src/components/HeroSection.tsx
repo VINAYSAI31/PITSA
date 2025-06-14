@@ -82,17 +82,7 @@ const HeroSection = () => {
               🍕 VIEW OUR MENU
             </motion.button>
 
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px rgba(255, 100, 0, 0.5)" }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-full transition-all duration-300 cursor-pointer"
-              onClick={() => {
-                const element = document.getElementById("contact");
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              📍 ORDER NOW
-            </motion.button>
+            
           </div>
 
           <div

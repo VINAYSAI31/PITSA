@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import SpecialtiesSection from "@/components/SpecialtiesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import Sponsored from "@/components/Sponsored";
 
 const Index = () => {
   return (
@@ -12,9 +13,11 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        {/* <AboutSection /> */}
+        <AboutSection />
         <SpecialtiesSection />
+        
         <ContactSection />
+        <Sponsored/>
       </main>
       <Footer />
     </div>

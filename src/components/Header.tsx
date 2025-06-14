@@ -19,7 +19,7 @@ const Header = () => {
               alt="PITSA Logo" 
               className="w-16 h-16 object-contain"
             />
-            <div className="text-2xl font-bold">PITSA</div>
+            
           </div>
 
           {/* Navigation */}

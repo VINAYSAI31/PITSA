@@ -78,9 +78,9 @@ const Footer = () => {
                   </svg>
                   <span>@pitsaindia</span>
                 </a>
-                {/* <p className="text-primary-foreground/60">
+                <p className="text-primary-foreground/60">
                   Mon - Sun: 11:00 AM - 11:00 PM
-                </p> */}
+                </p>
               </div>
             </div>
           </div>
