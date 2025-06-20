@@ -25,36 +25,43 @@ const SpecialtiesSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  const specialties = [
-    {
-      name: "Classic Margherita",
-      description: "San marzano tomato, buffalo mozzarella, parmesan, basil, olive oil",
-      price: "349/-",
-      emoji: "🍕",
-      color: "from-red-400 to-red-600"
-    },
-    {
-      name: "Chicken Tikka Pizza",
-      description: "Marinara, chicken tikka, capsicum, onion, mozzarella, pineapple",
-      price: "499/-",
-      emoji: "🐔",
-      color: "from-orange-400 to-orange-600"
-    },
-    {
-      name: "Pesto Chicken Pizza",
-      description: "Pesto, cherry tomato, roast chicken, kalamata olives, parmesan, mozzarella",
-      price: "469/-",
-      emoji: "🌿",
-      color: "from-green-400 to-green-600"
-    },
-    {
-      name: "Italian Tiramisu",
-      description: "Mascarpone cheese, ladyfinger, coffee liquid, dust with rich cocoa powder",
-      price: "319/-",
-      emoji: "🍰",
-      color: "from-amber-400 to-amber-600"
-    }
-  ];
+const specialties = [
+  {
+    name: "Pizza Fritta",
+    description: "Neapolitan-style fried pizza with ricotta, salami, and tomato sauce",
+    price: "399/-",
+    emoji: "🍕",
+    color: "from-red-400 to-red-600"
+  },
+  {
+    name: "Pesto Burrata Pizza",
+    description: "Fresh burrata, basil pesto, cherry tomatoes, and olive oil on Neapolitan dough",
+    price: "650/-",
+    emoji: "🧀",
+    color: "from-green-400 to-green-600"
+  },
+  {
+    name: "Mac and Cheese",
+    description: "Classic cheesy macaroni baked with herbs and creamy cheddar sauce",
+    price: "389/-",
+    emoji: "🧈",
+    color: "from-yellow-400 to-yellow-600"
+  },
+  {
+    name: "Hot Chocolate",
+    description: "Rich Belgian cocoa blended with steamed milk, topped with marshmallows",
+    price: "249/-",
+    emoji: "🍫",
+    color: "from-amber-500 to-amber-700"
+  },
+  {
+    name: "Classic Tiramisu",
+    description: "Layered Italian dessert with mascarpone, espresso-soaked ladyfingers, and cocoa",
+    price: "319/-",
+    emoji: "🍰",
+    color: "from-brown-400 to-brown-600"
+  }
+];
 
   return (
     <section id='specialties' ref={ref} className="py-20 px-4 bg-gradient-to-b from-cream to-warm-cream">
@@ -69,7 +76,7 @@ const SpecialtiesSection = () => {
           <div className="w-24 h-1 bg-pizza-red mx-auto mb-8 rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {specialties.map((item, index) => (
             <Card 
               key={index}
