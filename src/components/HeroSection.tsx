@@ -1,179 +1,95 @@
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-const OneDriveLink = "https://drive.google.com/file/d/1ARR6r3R8RvSmyk4PDg6nIoQ5MdbsNgA6/view?usp=drive_link";
+
+const OneDriveLink =
+  "https://drive.google.com/file/d/1ARR6r3R8RvSmyk4PDg6nIoQ5MdbsNgA6/view?usp=drive_link";
 
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
-      style={
-        {
-         "--pizza-size": "950px",
-          "--pizza-bottom": "68%",
-          "--leaf-1-size": "140px",
-          "--leaf-1-top": "329px",
-          "--leaf-1-right": "500px",
-          "--leaf-2-size": "175px",
-          "--leaf-2-bottom": "240px",
-          "--leaf-2-left": "845px",
-          "--leaf-3-size": "240px",
-          "--leaf-3-top": "440px",
-          "--leaf-3-left": "-70px",
-          "--leaf-4-size": "350px",
-          "--leaf-4-top": "270px",
-          "--leaf-4-left": "750px",
-        } as React.CSSProperties
-      }
+      className="relative min-h-screen bg-pizza-cream flex flex-col items-center justify-center overflow-hidden"
     >
-      {/* <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/Images/chef-bg-1-Photoro.png')" }}
-      ></div> */}
+      {/* Background Pizza Image (faded) */}
+      {/* <div className="absolute inset-0">
+        <img
+          src="/Images/pizza.png"
+          alt="Woodfire pizza"
+          className="w-full h-full object-cover opacity-30"
+        />
+      </div> */}
 
-      <div className="absolute inset-0 pizza-gradient opacity-20"></div>
-      <div className="absolute top-20 left-10 w-10 sm:w-20 h-10 sm:h-20 bg-pizza-orange/20 rounded-full animate-float"></div>
-      <div
-        className="absolute bottom-20 right-10 w-8 sm:w-16 h-8 sm:h-16 bg-pizza-red/20 rounded-full animate-float"
-        style={{ animationDelay: "1s" }}
-      ></div>
-      <div
-        className="absolute top-1/2 right-20 w-6 sm:w-12 h-6 sm:h-12 bg-pizza-gold/30 rounded-full animate-float"
-        style={{ animationDelay: "2s" }}
-      ></div>
-      <div className="container-max section-padding relative z-20 -mt-10 sm:-mt-20">
-        {/* Content Section */}
-        <div className="relative z-30 text-center mb-10 sm:mb-20">
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-primary mb-2 sm:mb-4 tracking-tight drop-shadow-lg animate-slide-down">
-            PITSA
-          </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-4 sm:mb-6 font-light italic">
-            The Woodfire Pizza 🍕
-          </p>
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
+        {/* Logo / Title */}
+        <motion.h1
+          className="text-6xl md:text-8xl font-mandora text-pizza-red drop-shadow-md"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          PITSA
+        </motion.h1>
 
-          {/* Stylized Tagline */}
-          <div className="text-lg sm:text-xl md:text-2xl text-foreground mb-8 sm:mb-14">
-            <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4 font-semibold tracking-wide">
-              <span className="px-2 border-b-2 border-orange-400">
-                Authentic Flavors
-              </span>
-              <span className="text-orange-400 text-xl sm:text-2xl">•</span>
-              <span className="px-2 border-b-2 border-green-500">
-                Fresh Ingredients
-              </span>
-              <span className="text-orange-400 text-xl sm:text-2xl">•</span>
-              <span className="px-2 border-b-2 border-yellow-400">
-                Unforgettable Taste
-              </span>
-            </div>
-            {/* <p className="mt-4 text-lg text-muted-foreground font-light animate-fadeInUp">
-              🔥 Experience the magic of traditional woodfire cooking!
-            </p> */}
-          </div>
+        {/* Tagline */}
+        <motion.p
+          className="mt-4 text-lg md:text-2xl font-bebas text-black tracking-widest"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          The Woodfire Pizza 🍕 | Fresh • Handmade • Authentic
+        </motion.p>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-7 justify-center items-center relative z-50">
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px rgba(255, 100, 0, 0.5)" }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white text-lg sm:text-xl px-8 sm:px-12 py-3 sm:py-4 rounded-full transition-all duration-300 cursor-pointer"
-              onClick={() => window.open(OneDriveLink, "_blank")}
-            >
-              🍕 VIEW OUR MENU
-            </motion.button>
-
-            
-          </div>
-
-          <div
-            className="absolute bottom-5 left-1/2 transform -translate-x-1/2"
-            style={{ transform: "translate(-50%, var(--pizza-bottom))" }}
+        {/* Large Navigation Links */}
+        <motion.nav
+          className="mt-12 flex flex-col sm:flex-row gap-8 sm:gap-20"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
+          <motion.a
+            href="/about"
+            whileHover={{ scale: 1.05 }}
+            className="text-5xl md:text-7xl font-bebas text-pizza-red tracking-wider relative group"
           >
-            <div className="relative mt-5 sm:mt-10">
-              {/* Pizza Image with glow animation */}
-              <div
-                className="relative animate-glow animate-slide-up"
-                style={{
-                  width: "var(--pizza-size)",
-                  height: "var(--pizza-size)",
-                }}
-              >
-                <img
-                  src="/Images/pizza.png"
-                  alt="Delicious pizza with fresh basil and tomatoes"
-                  className="w-full h-full object-contain"
-                />
-              </div>
+            INFO
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-pizza-red transition-all duration-300 group-hover:w-full"></span>
+          </motion.a>
 
-              {/* Additional floating basil around pizza */}
-              <div
-                className="absolute"
-                style={{
-                  width: "var(--leaf-1-size)",
-                  height: "var(--leaf-1-size)",
-                  top: "var(--leaf-1-top)",
-                  right: "var(--leaf-1-right)",
-                }}
-              >
-                <img
-                  src="/Images/97f9871d-b61a-4433-b72e-fbbdef867965.png"
-                  alt="Basil leaves"
-                  className="w-full h-full object-contain opacity-90 animate-slide-down"
-                />
-              </div>
+          <motion.a
+            href={OneDriveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            className="text-5xl md:text-7xl font-mandora text-pizza-red tracking-wider relative group"
+          >
+            MENU
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-pizza-red transition-all duration-300 group-hover:w-full"></span>
+          </motion.a>
 
-              <div
-                className="absolute"
-                style={{
-                  width: "var(--leaf-2-size)",
-                  height: "var(--leaf-2-size)",
-                  bottom: "var(--leaf-2-bottom)",
-                  left: "var(--leaf-2-left)",
-                }}
-              >
-                <img
-                  src="/Images/l1.png"
-                  alt="Basil leaves"
-                  className="w-full h-full object-contain opacity-90 animate-slide-down"
-                />
-              </div>
+          <motion.a
+            href="/specialties"
+            whileHover={{ scale: 1.05 }}
+            className="text-5xl md:text-7xl font-bebas text-pizza-red tracking-wider relative group"
+          >
+            ITEMS
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-pizza-red transition-all duration-300 group-hover:w-full"></span>
+          </motion.a>
+        </motion.nav>
+      </div><motion.button
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0px 0px 15px rgba(179, 32, 37, 0.4)",
+          }}
+          transition={{ type: "spring", stiffness: 300 }}
+          onClick={() => window.open(OneDriveLink, "_blank")}
+          className="mt-12 px-8 py-3 bg-pizza-red text-white font-bebas text-xl tracking-wide rounded-full shadow-md hover:bg-red-800 transition-colors"
+        >
+          🍕 VIEW OUR MENU
+        </motion.button>
 
-              <div
-                className="absolute"
-                style={{
-                  width: "var(--leaf-3-size)",
-                  height: "var(--leaf-3-size)",
-                  top: "var(--leaf-3-top)",
-                  left: "var(--leaf-3-left)",
-                }}
-              >
-                <img
-                  src="/Images/e6fa6a03-dee3-4aba-b848-960aeb6aef56.png"
-                  alt="Basil leaves"
-                  className="w-full h-full object-contain opacity-90 animate-slide-down"
-                />
-              </div>
-
-              <div
-                className="absolute"
-                style={{
-                  width: "var(--leaf-4-size)",
-                  height: "var(--leaf-4-size)",
-                  top: "var(--leaf-4-top)",
-                  left: "var(--leaf-4-left)",
-                }}
-              >
-                <img
-                  src="/Images/30eae99c-2b09-4a69-9096-8a68235591f9.png"
-                  alt="Basil leaves"
-                  className="w-full h-full object-contain opacity-90 animate-slide-down"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="absolute bottom-0 left-0 w-full h-10 sm:h-20 opacity-20">
+      {/* Decorative brush stroke at bottom */}
+      <div className="absolute bottom-0 left-0 w-full h-12 sm:h-20 opacity-20">
         <img
           src="/Images/6448c581-7fff-4753-a774-fc91f14cf53b.png"
           alt="Orange brush stroke"

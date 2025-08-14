@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
 @layer base {
   :root {
-    --background: 45 25% 97%;
+    --pizza-cream: 39 69% 91%; /* #f8edd9 */
+    --background: var(--pizza-cream);
     --foreground: 0 0% 15%;
 
     --card: 45 25% 99%;
@@ -38,12 +41,11 @@
 
     /* Custom pizza theme colors */
     --pizza-red: 0 68% 42%;
-    --pizza-cream: 45 25% 97%;
     --pizza-orange: 25 85% 60%;
     --pizza-gold: 45 90% 65%;
     --pizza-warm: 15 60% 55%;
   }
-
+ 
   .dark {
     --background: 0 0% 8%;
     --foreground: 45 25% 97%;
@@ -74,19 +76,47 @@
     --ring: 0 68% 55%;
   }
 }
+@font-face {
+  font-family: "Mandora";
+  src: url("/fonts/Mandora.woff2") format("woff2"); /* Adjust path */
+  font-weight: normal;
+  font-style: normal;
+}
 
 @layer base {
   * {
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply bg-pizza-cream text-black;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-pizza-red font-mandora;
+  }
+  p,
+  span,
+  li {
+    @apply text-black font-bebas;
   }
 
   .pizza-gradient {
-    background: linear-gradient(135deg, hsl(var(--pizza-cream)) 0%, hsl(var(--pizza-orange)) 50%, hsl(var(--pizza-red)) 100%);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--pizza-cream)) 0%,
+      hsl(var(--pizza-orange)) 50%,
+      hsl(var(--pizza-red)) 100%
+    );
   }
 
   .warm-glow {

@@ -1,20 +1,36 @@
+import { motion } from "framer-motion";
+
+
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding bg-secondary/30">
+    <section id="about" className="pt-28 md:pt-36 section-padding bg-pizza-cream">
       <div className="container-max">
+        <div className="text-center mb-12 md:mb-16">
+          {/* <h2 className="text-5xl font-bold font-mandora text-pizza-red mb-4 drop-shadow-md">ABOUT US</h2> */}
+          <motion.h1
+          className="text-6xl md:text-6xl font-mandora text-pizza-red drop-shadow-md"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          ABOUT US
+        </motion.h1>
+
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold text-primary">
+              <h3 className="text-3xl md:text-4xl font-bold font-mandora text-pizza-red drop-shadow-md">
                 Our Story
-              </h2>
-              <p className="text-xl text-muted-foreground">
+              </h3>
+              <p className="text-xl text-muted-foreground font-bebas tracking-widest">
                 Where tradition meets flavor
               </p>
             </div>
 
-            <div className="space-y-4 text-lg leading-relaxed">
+            <div className="space-y-4 text-lg leading-relaxed p-6 rounded-2xl shadow-sm font-bebas tracking-widest">
               <p>
                 Founded by Chef Krunal Kumbhar and Chef Mansi Kumbhar, Pitsa is
                 a passion project that brings the authentic taste of local
@@ -34,12 +50,12 @@ const AboutSection = () => {
 
             <div className="grid grid-cols-2 gap-6 pt-4">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">5+</div>
-                <div className="text-muted-foreground">Years of Excellence</div>
+                <div className="text-3xl font-bold font-mandora text-pizza-red  mb-2">5+</div>
+                <div className="text-muted-foreground font-bebas tracking-widest">Years of Excellence</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                <div className="text-muted-foreground">Menu Items</div>
+                <div className="text-3xl font-bold font-mandora text-pizza-red  mb-2">50+</div>
+                <div className="text-muted-foreground font-bebas tracking-widest">Menu Items</div>
               </div>
             </div>
           </div>

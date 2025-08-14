@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 const OneDriveLink = "https://drive.google.com/file/d/1ARR6r3R8RvSmyk4PDg6nIoQ5MdbsNgA6/view?usp=drive_link";
+import { motion } from "framer-motion";
 
 
 const SpecialtiesSection = () => {
@@ -64,13 +65,13 @@ const specialties = [
 ];
 
   return (
-    <section id='specialties' ref={ref} className="py-20 px-4 bg-gradient-to-b from-cream to-warm-cream">
+    <section id='specialties' ref={ref} className="py-20 px-4 pt-28 bg-gradient-to-b from-cream to-warm-cream">
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-16 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <h2 className="text-5xl font-bold text-pizza-red mb-6 font-pizza">
+          <h1 className="text-3xl md:text-5xl font-mandora text-pizza-red drop-shadow-md mb-6 ">
             Our Specialties
-          </h2>
-          <p className="text-xl text-warm-brown mb-8">
+          </h1>
+          <p className="text-xl text-warm-brown mb-8 font-bebas tracking-widest">
             Handcrafted favorites that keep our customers coming back
           </p>
           <div className="w-24 h-1 bg-pizza-red mx-auto mb-8 rounded-full"></div>
@@ -94,17 +95,17 @@ const specialties = [
                 </div>
                 
                 {/* Item Name */}
-                <h3 className="text-xl font-bold text-pizza-red mb-3 group-hover:scale-105 transition-transform duration-300">
+                <h3 className="text-xl font-bold font-mandora text-pizza-red drop-shadow-md mb-3 group-hover:scale-105 transition-transform duration-300">
                   {item.name}
                 </h3>
                 
                 {/* Description */}
-                <p className="text-warm-brown text-sm leading-relaxed mb-4 min-h-[60px]">
+                <p className="text-warm-brown text-sm font-bebas tracking-widest eading-relaxed mb-4 min-h-[60px]">
                   {item.description}
                 </p>
                 
                 {/* Price */}
-                <div className="text-2xl font-bold text-pizza-red mb-4 animate-pulse-gentle">
+                <div className="text-2xl font-bold font-mandora text-pizza-red mb-4 animate-pulse-gentle">
                   ₹{item.price}
                 </div>
                 
