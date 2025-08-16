@@ -31,35 +31,35 @@ const specialties = [
     name: "Pizza Fritta",
     description: "Neapolitan-style fried pizza with ricotta, salami, and tomato sauce",
     price: "399/-",
-    emoji: "🍕",
+    image: "/Images/dish1.png",
     color: "from-red-400 to-red-600"
   },
   {
     name: "Pesto Burrata Pizza",
     description: "Fresh burrata, basil pesto, cherry tomatoes, and olive oil on Neapolitan dough",
     price: "650/-",
-    emoji: "🧀",
+    image: "/Images/dish2.png",
     color: "from-green-400 to-green-600"
   },
   {
     name: "Mac and Cheese",
     description: "Classic cheesy macaroni baked with herbs and creamy cheddar sauce",
     price: "389/-",
-    emoji: "🧈",
+    image: "/Images/dish3.png",
     color: "from-yellow-400 to-yellow-600"
   },
   {
     name: "Hot Chocolate",
     description: "Rich Belgian cocoa blended with steamed milk, topped with marshmallows",
     price: "249/-",
-    emoji: "🍫",
+    image: "/Images/dish4.png",
     color: "from-amber-500 to-amber-700"
   },
   {
     name: "Classic Tiramisu",
     description: "Layered Italian dessert with mascarpone, espresso-soaked ladyfingers, and cocoa",
     price: "319/-",
-    emoji: "🍰",
+    image: "/Images/dish5.png",
     color: "from-brown-400 to-brown-600"
   }
 ];
@@ -89,9 +89,19 @@ const specialties = [
               <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
               
               <div className="relative p-6 text-center">
-                {/* Emoji with Animation */}
-                <div className="text-6xl mb-4 animate-bounce-gentle group-hover:animate-spin-slow transition-all duration-300">
-                  {item.emoji}
+                {/* Emoji or Image with Animation */}
+                <div className="mb-4 animate-bounce-gentle group-hover:animate-spin-slow transition-all duration-300">
+                  {item.image ? (
+                    <img 
+                      src={item.image} 
+                      alt={item.name}
+                      className="w-20 h-20 mx-auto object-cover"
+                    />
+                  ) : (
+                    <div className="text-6xl">
+                      {item.emoji}
+                    </div>
+                  )}
                 </div>
                 
                 {/* Item Name */}

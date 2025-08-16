@@ -157,7 +157,7 @@ font-bebas tracking-widest">
               <p className="text-2xl font-bold font-mandora text-pizza-red drop-shadow-md">
                 <strong>Operating Hours:</strong>
                 <br />
-                Monday - Sunday: 11:00 AM - 11:00 PM
+                Monday - Sunday: 02:00 PM - 11:00 PM
               </p>
             </div>
           </div>

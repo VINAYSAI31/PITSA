@@ -79,7 +79,7 @@ const Footer = () => {
                   <span className="text-xl font-mandora text-white drop-shadow-md">@pitsaindia</span>
                 </a>
                 <p className="text-xl font-mandora text-white drop-shadow-md">
-                  Mon - Sun: 11:00 AM - 11:00 PM
+                  Mon - Sun: 02:00 PM - 11:00 PM
                 </p>
               </div>
             </div>
