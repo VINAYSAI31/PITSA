@@ -115,14 +115,12 @@ font-bebas tracking-widest">
           {/* CTA Section */}
           <div className="lg:pl-8">
             <div className="bg-secondary rounded-3xl p-8 text-center">
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg
-                  className="w-10 h-10"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1V3C15 4.1 14.1 5 13 5H11C9.9 5 9 4.1 9 3V1L3 7V9C3 10.1 3.9 11 5 11H8L8.5 12L9 11H15L15.5 12L16 11H19C20.1 11 21 10.1 21 9Z" />
-                </svg>
+              <div className="w-28 h-28 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
+                <img
+                  src="/Images/about2.jpg"
+                  alt="Chef Krunal and Chef Mansi at work"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
 
               <h3 className="text-3xl font-bold font-mandora text-pizza-red drop-shadow-md mb-4 ">Ready to Order?</h3>
