@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 
 const OneDriveLink =
-  "https://drive.google.com/file/d/1ARR6r3R8RvSmyk4PDg6nIoQ5MdbsNgA6/view?usp=drive_link";
-
+"https://drive.google.com/file/d/1AcHaJvdAe3aqa8Q8F6X5C3AgbNScbbs3/view?usp=sharing"
 const HeroSection = () => {
   return (
     <section
