@@ -38,9 +38,7 @@ const AboutSection = () => {
               <h3 className="text-3xl md:text-4xl font-bold font-mandora text-pizza-red drop-shadow-md">
                 Our Story
               </h3>
-              <p className="text-xl text-muted-foreground font-bebas tracking-widest">
-                Where tradition meets flavour
-              </p>
+             
             </div>
 
             <div className="space-y-4 text-lg leading-relaxed p-6 rounded-2xl shadow-sm font-bebas tracking-widest">

@@ -11,7 +11,7 @@ const Footer = () => {
                 <img
                   src="/Images/logo.png"
                   alt="Pitsa Logo"
-                  className="w-28 md:w-36 object-contain"
+                  className="w-30 md:w-36 object-contain"
                 />
               </div>
               
