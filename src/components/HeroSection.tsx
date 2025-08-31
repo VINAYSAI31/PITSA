@@ -11,18 +11,32 @@ const HeroSection = () => {
     >
       {/* Background Pizza Image */}
       <div className="absolute inset-0">
-      <img
-  src="/Images/back5.jpg"
-  alt="Woodfire pizza"
-  className="w-full h-full object-cover"
-  style={{ objectPosition: "center 70%" }}
-/>
+        <img
+          src="/Images/back5.jpg"
+          alt="Woodfire pizza"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "center 70%" }}
+        />
+      </div>
 
+      {/* Logo on Top-Left */}
+      <div className="absolute top-6 left-6 z-20">
+        <button
+          aria-label="Go to Home"
+          onClick={() => (window.location.href = "/")}
+          className="focus:outline-none"
+        >
+          <img
+            src="/Images/logo.png" // 👈 your logo file
+            alt="Pitsa Logo"
+            className="h-16 w-auto object-contain md:h-20"
+          />
+        </button>
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 mt-16 md:mt-28">
-        {/* Logo / Title */}
+        {/* Title */}
         <motion.h1
           className="text-6xl md:text-8xl font-mandora text-pizza-cream drop-shadow-md mt-[-30px] md:mt-0"
           initial={{ opacity: 0, y: -30 }}
@@ -31,9 +45,6 @@ const HeroSection = () => {
         >
           PITSA
         </motion.h1>
-
-        {/* Tagline (desktop only) */}
-        
 
         {/* Navigation Links */}
         <motion.nav
@@ -63,7 +74,7 @@ const HeroSection = () => {
           </motion.a>
         </motion.nav>
 
-        {/* Menu Button */}
+        {/* CTA Button */}
         <motion.button
           whileHover={{
             scale: 1.05,
@@ -75,9 +86,6 @@ const HeroSection = () => {
         >
           VIEW OUR MENU
         </motion.button>
-
-        {/* Tagline (mobile only, placed below button) */}
-       
       </div>
     </section>
   );

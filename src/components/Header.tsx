@@ -76,11 +76,7 @@ const Header = () => {
             onClick={() => handleNav("/")}
             className="flex items-center space-x-4 translate-y-5 focus:outline-none"
           >
-            <img
-    src="/Images/logo.png" // 👈 place your logo here
-    alt="Pitsa Logo"
-    className="h-20 w-auto object-contain"
-  />
+           
           </button>
 
           {/* Desktop Navigation */}
