@@ -1,11 +1,24 @@
 import { motion } from "framer-motion";
+import { Home } from "lucide-react"; // 👈 home icon
+import { useNavigate } from "react-router-dom";
 
 const AboutSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section
       id="about"
-      className="pt-20 md:pt-20 section-padding bg-pizza-cream"
+      className="pt-20 md:pt-20 section-padding bg-pizza-cream relative"
     >
+      {/* Home Button */}
+      <button
+        onClick={() => navigate("/")}
+        aria-label="Go to Home"
+        className="absolute top-6 left-6 z-50 p-2 rounded-full hover:bg-pizza-red/10 transition"
+      >
+        <Home className="w-8 h-8 text-pizza-red" />
+      </button>
+
       <div className="container-max">
         <div className="text-center mb-12 md:mb-16">
           <motion.h1
@@ -90,19 +103,18 @@ const AboutSection = () => {
 
           {/* Image Gallery */}
           <motion.div
-className="relative overflow-hidden rounded-2xl shadow-2xl mx-auto max-w-md -mt-40"
-  initial={{ opacity: 0, x: 30 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.7, delay: 0.2 }}
->
-  <img
-    src="/Images/about1.jpg"
-    alt="Pitsa restaurant ambiance and atmosphere"
-    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-</motion.div>
-
+            className="relative overflow-hidden rounded-2xl shadow-2xl mx-auto max-w-md -mt-40"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            <img
+              src="/Images/about1.jpg"
+              alt="Pitsa restaurant ambiance and atmosphere"
+              className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          </motion.div>
         </div>
       </div>
     </section>
