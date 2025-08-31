@@ -17,10 +17,7 @@ const ContactSection = () => {
         >
           Get In Touch
         </motion.h1>
-          <p className="text-xl text-muted-foreground 
-font-bebas tracking-widest">
-            Ready to taste authentic woodfire pizza? Contact us today!
-          </p>
+          
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
