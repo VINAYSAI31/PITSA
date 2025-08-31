@@ -17,7 +17,10 @@ const ContactSection = () => {
         >
           Get In Touch
         </motion.h1>
-          
+          <p className="text-xl text-muted-foreground 
+font-bebas tracking-widest">
+            Ready to taste authentic woodfire pizza? Contact us today!
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -110,7 +113,17 @@ const ContactSection = () => {
           </div>
 
           {/* CTA Section */}
-         
+          <div className="lg:pl-8">
+          
+
+            <div className="mt-20 text-center">
+              <p className="text-2xl font-bold font-mandora text-pizza-red drop-shadow-md">
+                <strong>Operating Hours:</strong>
+                <br />
+                Monday - Sunday: 02:00 PM - 11:00 PM
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
