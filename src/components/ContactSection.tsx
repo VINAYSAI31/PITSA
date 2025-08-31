@@ -113,13 +113,38 @@ const ContactSection = () => {
           <div className="lg:pl-8">
           
 
-            <div className="mt-20 text-center">
-              <p className="text-2xl font-bold font-mandora text-pizza-red drop-shadow-md">
-                <strong>Operating Hours:</strong>
-                <br />
-                Monday - Sunday: 02:00 PM - 11:00 PM
-              </p>
-            </div>
+            <div className="mt-20 text-center space-y-6">
+  <p className="text-2xl font-bold font-mandora text-pizza-red drop-shadow-md">
+    <strong>Operating Hours:</strong>
+    <br />
+    Monday - Sunday: 02:00 PM - 11:00 PM
+  </p>
+
+  {/* Address */}
+  <div className="text-lg font-semibold text-foreground">
+    <p className="font-mandora text-pizza-red drop-shadow-md text-2xl mb-4">
+      Visit Us
+    </p>
+    <p>
+      Vertex Solitaire, Rd, opp. fitness prophecy, Gandhar Nagar, Khadakpada,  
+      Kalyan, Maharashtra 421301
+    </p>
+  </div>
+
+  {/* Google Maps Embed */}
+  <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-md mt-6">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.8134555812735!2d73.12873367493395!3d19.253547296375242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7970e13116685%3A0xaf5497dca71a98a3!2sPITSA-%20Authentic%20Italian%20pizza%20place!5e1!3m2!1sen!2sin!4v1756649328127!5m2!1sen!2sin"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
+
           </div>
         </div>
       </div>
