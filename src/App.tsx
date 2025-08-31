@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Specialties from "./pages/Specialties";
+import { Analytics } from "@vercel/analytics/react"; // ✅ correct import
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <Analytics /> {/* ✅ Add this inside App to enable Vercel Analytics */}
     </TooltipProvider>
   </QueryClientProvider>
 );
