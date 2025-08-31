@@ -19,7 +19,7 @@ const Footer = () => {
                 The Woodfire Pizza
               </p>
               <p className="text-sm text-white font-bebas tracking-widest">
-                Authentic flavors, fresh ingredients, unforgettable taste.
+                Authentic flavours, fresh ingredients, unforgettable taste.
               </p>
             </div>
 

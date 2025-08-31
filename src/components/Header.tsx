@@ -20,7 +20,6 @@ const Header = () => {
   const navItems = [
     { name: "Home", to: "/" },
     { name: "About", to: "/about" },
-    { name: "Specialties", to: "/specialties" },
     { name: "Contact", to: "/#contact" },
   ];
 
@@ -49,11 +48,11 @@ const Header = () => {
             onClick={() => handleNav("/")}
             className="flex items-center space-x-4 translate-y-5 focus:outline-none"
           >
-            <img
+            {/* <img
               src="/Images/logo.png"
               alt="PITSA Logo"
               className="w-16 h-16 object-contain"
-            />
+            /> */}
           </button>
 
           {/* Desktop Navigation */}
@@ -62,7 +61,7 @@ const Header = () => {
               <button
                 key={item.to}
                 onClick={() => handleNav(item.to)}
-                className="text-2xl text-pizza-red font-bold font-mandora relative group"
+                className="text-2xl text-pizza-cream font-bold font-mandora relative group"
 
               >
                 {item.name}
