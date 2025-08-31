@@ -77,14 +77,7 @@ const HeroSection = () => {
         </motion.button>
 
         {/* Tagline (mobile only, placed below button) */}
-        <motion.p
-          className="block md:hidden mt-6 text-lg font-bebas text-pizza-cream tracking-widest"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
-          The Woodfire Pizza | Fresh • Handmade • Authentic
-        </motion.p>
+       
       </div>
     </section>
   );
