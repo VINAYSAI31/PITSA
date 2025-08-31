@@ -52,7 +52,7 @@ const HeroSection = () => {
           <motion.a
             href="/about"
             whileHover={{ scale: 1.05 }}
-            className="text-5xl md:text-8xl font-poppins font-thin text-pizza-cream tracking-wider relative group"
+            className="text-5xl md:text-8xl font-mandora font-thin text-pizza-cream tracking-wider relative group"
           >
             INFO
             <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-pizza-cream transition-all duration-300 group-hover:w-full"></span>
@@ -63,7 +63,7 @@ const HeroSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
-            className="text-5xl md:text-8xl font-poppins font-thin text-pizza-cream tracking-wider relative group"
+            className="text-5xl md:text-8xl font-mandora font-thin text-pizza-cream tracking-wider relative group"
           >
             MENU
             <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-pizza-red transition-all duration-300 group-hover:w-full"></span>

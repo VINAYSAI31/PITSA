@@ -72,7 +72,7 @@ export default {
         "pizza-warm": "hsl(var(--pizza-warm))",
       },
       fontFamily: {
-        mandora: ["Poppins"],
+        mandora: ["Roboto"],
         bebas: ["Bebas Neue", ],
       },
       borderRadius: {
