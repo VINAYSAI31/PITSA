@@ -17,10 +17,7 @@ const ContactSection = () => {
         >
           Get In Touch
         </motion.h1>
-          <p className="text-xl text-muted-foreground 
-font-bebas tracking-widest">
-            Ready to taste authentic woodfire pizza? Contact us today!
-          </p>
+          
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -113,52 +110,7 @@ font-bebas tracking-widest">
           </div>
 
           {/* CTA Section */}
-          <div className="lg:pl-8">
-            <div className="bg-secondary rounded-3xl p-8 text-center">
-              <div className="w-28 h-28 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
-                <img
-                  src="/Images/about2.jpg"
-                  alt="Chef Krunal and Chef Mansi at work"
-                  className="w-full h-full object-cover rounded-full"
-                />
-              </div>
-
-              <h3 className="text-3xl font-bold font-mandora text-pizza-red drop-shadow-md mb-4 ">Ready to Order?</h3>
-
-              <p className="text-lg mb-8 opacity-90 font-bebas tracking-widest">
-                Call us now or visit our restaurant to experience the authentic
-                taste of woodfire pizza!
-              </p>
-
-              <div className="space-y-4">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full text-lg py-6 bg-white text-primary hover:bg-white/90"
-                  onClick={() => (window.location.href = "tel:9867595695")}
-                >
-                  <svg
-                    className="w-5 h-5 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                  </svg>
-                  CALL NOW: +91 9867595695
-                </Button>
-
-              
-              </div>
-            </div>
-
-            <div className="mt-20 text-center">
-              <p className="text-2xl font-bold font-mandora text-pizza-red drop-shadow-md">
-                <strong>Operating Hours:</strong>
-                <br />
-                Monday - Sunday: 02:00 PM - 11:00 PM
-              </p>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>
