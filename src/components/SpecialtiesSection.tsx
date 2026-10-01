@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-const OneDriveLink = "https://drive.google.com/file/d/1StY6MNf7Z3EQS9A1w0vJyLP0GmNYWkHJ/view?usp=sharing";
+const OneDriveLink = "https://drive.google.com/file/d/1KWtc__FJURo3PNncg3zNDHkFw6yfxKp8/view?usp=sharing";
 import { motion } from "framer-motion";
 
 
